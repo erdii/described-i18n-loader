@@ -1,0 +1,15 @@
+{
+  "name": "described-i18n-loader",
+  "version": "0.0.1",
+  "description": "Load i18n json files with key value pairs while stripping the 'desc' key from all subkeys. eg: key = 'conf.title', value = { text: \"Configuration\", desc: \"Title for config screen\" }",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "test": "webpack test/index.js out/bundle.js"
+  },
+  "author": "erdii <erdiicodes@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^2.3.2"
+  }
+}
