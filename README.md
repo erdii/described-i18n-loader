@@ -5,7 +5,7 @@ A webpack 1 & 2 loader for i18n json bundles that look like this:
 ```JSON
 {
 	"conf.title": {
-		"desc": "Title for config screen"
+		"desc": "Title for config screen",
 		"text": "Configuration",
 	},
 
