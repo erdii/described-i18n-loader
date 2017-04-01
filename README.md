@@ -4,27 +4,38 @@ A webpack 1 & 2 loader for i18n json bundles that look like this:
 
 ```JSON
 {
-	"conf.title": {
-		"desc": "Title for config screen",
-		"text": "Configuration",
+	"conf": {
+		"title": {
+			"desc": "Title for config screen",
+			"text": "Configuration"
+		}
 	},
 
-	"app.title": {
-		"desc": "The app window title",
-		"text": "MyApp",
+	"app": {
+		"title": {
+			"desc": "The app window title",
+			"text": "MyApp"
+		}
 	},
 
-	"nav.button.home": {
-		"desc": "Navbar button for the app's homescreen",
-		"text": "Home",
+	"nav": {
+		"button": {
+			"home": {
+				"desc": "Navbar button for the app's homescreen",
+				"text": "Home"
+			},
+			"about": {
+				"desc": "Navbar button for the app's about screen",
+				"text": "About"
+			}
+		}
 	},
 
-	"nav.button.about": {
-		"desc": "Navbar button for the app's about screen",
-		"text": "About",
-	},
-
-	"another.pure.key": "Pure Key"
+	"another": {
+		"pure": {
+			"key": "Pure key"
+		}
+	}
 }
 ```
 

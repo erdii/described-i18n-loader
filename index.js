@@ -3,19 +3,21 @@
 	Author @erdii
 */
 
-module.exports = function(str) {
-	this.cacheable(true);
-
-	const locale = JSON.parse(str);
+function descendIntoObject(target) {
 	const output = {};
 
-	for (let key in locale) {
-		const value = locale[key];
+	for (let key in target) {
+		const value = target[key];
 
 		let ref;
+
 		switch (typeof value) {
 			case "object":
-				ref = value.text;
+				if (value.text) {
+					ref = value.text;
+				} else {
+					ref = descendIntoObject(value);
+				}
 				break;
 			case "string":
 			default:
@@ -24,6 +26,15 @@ module.exports = function(str) {
 
 		output[key] = ref;
 	}
+
+	return output;
+}
+
+module.exports = function(str) {
+	this.cacheable(true);
+
+	const locale = JSON.parse(str);
+	const output = descendIntoObject(locale);
 
 	const value = JSON.stringify(output)
 		.replace(/\u2028/g, '\\u2028')
