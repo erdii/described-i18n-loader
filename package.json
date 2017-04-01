@@ -1,6 +1,6 @@
 {
   "name": "described-i18n-loader",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Load i18n json files with key value pairs while stripping the 'desc' key from all subkeys. eg: key = 'conf.title', value = { text: \"Configuration\", desc: \"Title for config screen\" }",
   "main": "index.js",
   "bugs": {
