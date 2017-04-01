@@ -1,6 +1,23 @@
 {
 	"conf.title": {
-		"text": "Configuration",
-		"desc": "Title for config screen"
-	}
+		"desc": "Title for config screen",
+		"text": "Configuration"
+	},
+
+	"app.title": {
+		"desc": "The app window title",
+		"text": "MyApp"
+	},
+
+	"nav.button.home": {
+		"desc": "Navbar button for the app's homescreen",
+		"text": "Home"
+	},
+
+	"nav.button.about": {
+		"desc": "Navbar button for the app's about screen",
+		"text": "About"
+	},
+
+	"another.pure.key": "Pure Key"
 }
