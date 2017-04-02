@@ -3,6 +3,8 @@
 	Author @erdii
 */
 
+const loaderUtils = require("loader-utils");
+
 function descendIntoObject(target) {
 	const output = {};
 
@@ -32,6 +34,7 @@ function descendIntoObject(target) {
 
 module.exports = function(str) {
 	this.cacheable(true);
+	const options = loaderUtils.getOptions(this) || {};
 
 	const locale = JSON.parse(str);
 	const output = descendIntoObject(locale);
@@ -40,7 +43,7 @@ module.exports = function(str) {
 		.replace(/\u2028/g, '\\u2028')
 		.replace(/\u2029/g, '\\u2029');
 
-	const module = this.version && this.version >= 2
+	const module = this.version && this.version >= 2 && !options.forceModuleExports
 		? `export default ${value};`
 		: `module.exports = ${value};`;
 

@@ -43,6 +43,7 @@ The loader will parse the json and replace the objects with their `text` propert
 
 The output looks like this (just minified):
 
+**(node)**
 ```JSON
 module.exports = {
 	"conf.title": "Configuration",
@@ -52,3 +53,19 @@ module.exports = {
 	"another.pure.key": "Pure Key"
 };
 ```
+
+**(es6)**
+```JSON
+export default {
+	"conf.title": "Configuration",
+	"app.title": "MyApp",
+	"nav.button.home": "Home",
+	"nav.button.about": "About",
+	"another.pure.key": "Pure Key"
+}
+```
+
+
+## Options
+
+* `forceModuleExports`: force node style module `DEFAULT - webpack 1: true, webpack 2: false`

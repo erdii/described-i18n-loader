@@ -12,11 +12,15 @@
   },
   "scripts": {
     "webpack": "webpack",
-    "test": "webpack test/index.js out/bundle.js"
+    "test-node": "webpack test/node.js out/bundle-node.js",
+    "test-es6": "webpack test/es6.js out/bundle-es6.js"
   },
   "author": "erdii <erdiicodes@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "webpack": "^2.3.2"
+  },
+  "dependencies": {
+    "loader-utils": "^1.1.0"
   }
 }
